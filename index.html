@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI Resume Checker — Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-wrapper">
+      <div class="brand-icon">⚡</div>
+      <div class="brand-text">
+        <div class="brand-main">AI Resume</div>
+        <div class="brand-sub">Checker</div>
+      </div>
+    </div>
+    <div class="actions">
+      <button id="sampleBtn" class="btn ghost" aria-label="Load sample resume">Sample Resume</button>
+      <button id="darkToggle" class="btn" aria-pressed="false" aria-label="Toggle dark mode"><span id="darkIcon">🌙</span> <span id="darkLabel">Dark</span></button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero card">
+      <h1>AI Resume Checker</h1>
+      <p class="lead">Analyze your resume against a job description. Get a score, skills match, missing keywords, suggestions, and ATS tips — all in a beautiful, responsive UI.</p>
+      <button id="ctaAnalyze" class="btn primary">Analyze Now</button>
+    </section>
+
+    <section class="input-grid">
+      <div class="card upload">
+        <h2>Resume Upload</h2>
+        <p class="muted">Upload a PDF or paste plain text below.</p>
+        <input id="fileInput" type="file" accept=".pdf,.txt" />
+        <textarea id="resumeText" placeholder="Or paste resume text here..." rows="8"></textarea>
+      </div>
+
+      <div class="card jobdesc">
+        <h2>Job Description</h2>
+        <p class="muted">Paste the job description for better, tailored suggestions.</p>
+        <textarea id="jobDesc" placeholder="Paste job description here..." rows="12"></textarea>
+        <div class="controls">
+          <button id="analyzeBtn" class="btn primary">Analyze</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="results" class="results">
+      <div class="card result-overview">
+        <div class="left">
+          <h3>Resume Score</h3>
+          <div id="scoreValue" class="score">—</div>
+          <div class="progress-wrap">
+            <div id="scoreBar" class="progress"></div>
+          </div>
+        </div>
+        <div class="right">
+          <h3>Skills Match</h3>
+          <div id="skillValue" class="skill-percent">—%</div>
+          <div class="progress-wrap">
+            <div id="skillBar" class="progress"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card lists">
+        <div class="card-col">
+          <h4>Missing Keywords</h4>
+          <ul id="missingKeywords" class="list"></ul>
+        </div>
+        <div class="card-col">
+          <h4>Improvement Suggestions</h4>
+          <ul id="suggestions" class="list"></ul>
+        </div>
+        <div class="card-col">
+          <h4>ATS Compatibility Tips</h4>
+          <ul id="atsTips" class="list"></ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="loader" class="loader hidden">
+    <div class="spinner"></div>
+    <div class="loader-text">Analyzing...</div>
+  </div>
+
+  <footer>
+    <p>✨ <strong>AI Resume Checker</strong> — Analyze your resume with AI-powered insights</p>
+    <p style="font-size: 12px; margin-top: 12px; opacity: 0.8;">Built with ❤️ | <a href="#">Privacy</a> • <a href="#">Terms</a> • <a href="#">Contact</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

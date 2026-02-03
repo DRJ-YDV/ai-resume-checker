@@ -28,31 +28,6 @@ Ai_Resume_Checker/
     └── .env             # Environment variables (not committed)
 ```
 
-## 🚀 Quick Start
-
-### Frontend Only (No Backend)
-```bash
-# Open index.html in your browser
-start index.html
-# Or use Live Server extension in VS Code
-```
-
-### With Backend (Full Features)
-```bash
-# Install server dependencies
-cd server
-npm install
-
-# Set up environment variables
-# Create .env file in server folder and add:
-# GOOGLE_API_KEY=your_google_api_key_here
-
-# Start server
-npm start
-
-# Open http://localhost:3000 in browser
-```
-
 ## 🔧 API Endpoints
 
 ### POST /api/analyze
@@ -85,13 +60,6 @@ multipart/form-data with file field
 - dotenv (environment variables)
 - Google Vision API (OCR - optional)
 
-## 🔐 Environment Variables
-
-Create `server/.env`:
-```
-GOOGLE_API_KEY=your_google_cloud_api_key
-PORT=3000
-```
 
 ## 📱 Responsive Breakpoints
 
@@ -107,40 +75,5 @@ PORT=3000
 - Progress bars with glow effects
 - Loading spinner with animation
 - Professional footer with links
-
-## ✅ Troubleshooting
-
-**Error: fatal: not a git repository**
-```bash
-# You're not in the project directory
-cd c:\Users\dheer\Desktop\Projects\Ai_Resume_Checker
-```
-
-**Error: Could not read Username**
-```bash
-# Configure Git with your GitHub credentials
-git config --global user.name "Your Name"
-git config --global user.email "your.email@example.com"
-```
-
-**node_modules too large?**
-- It's already in `.gitignore` ✓
-- GitHub will not upload it
-- Users run `npm install` to get dependencies
-
-## 📄 License
-
-MIT License - Feel free to use, modify, and distribute.
-
-## 🎯 Next Steps
-
-- [ ] Integrate real AI model (OpenAI, Vertex AI)
-- [ ] Add database for storing analysis history
-- [ ] Implement user authentication
-- [ ] Add more file format support
-- [ ] Create mobile app version
-- [ ] Deploy to production (Heroku, Vercel, AWS)
-
----
 
 **Built with ❤️ | Made with HTML, CSS, JavaScript & Express.js**
